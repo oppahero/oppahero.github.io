@@ -1,0 +1,182 @@
+:root {
+  --button-text-color: #4036a9;
+  --text-color: #111729;
+  --form: #cdd5e0;
+  --titles-color: #f8fafc;
+  --heading-font-size: 2rem;
+  --body-font-size: 1rem;
+  --label-font-size: 0.875rem;
+  --button-font-size: 1.25rem;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 350px;
+}
+
+h1,
+p {
+  color: var(--titles-color);
+}
+
+h1 {
+  font-size: var(--heading-font-size);
+  padding-bottom: 20px;
+}
+
+p {
+  line-height: 22px;
+}
+
+p,
+input,
+select,
+textarea {
+  font-size: var(--body-font-size);
+}
+
+label {
+  font-size: var(--label-font-size);
+  display: block;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+button {
+  font-size: var(--button-font-size);
+  background-color: #ffffff;
+  color: var(--button-text-color);
+}
+
+textarea {
+  resize: none;
+}
+
+form {
+  padding: 40px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+input,
+textarea,
+select {
+  color: var(--text-color);
+}
+
+::placeholder {
+    color: var(--form);
+    font-weight: normal;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: center / cover no-repeat url(assets/bg-image.svg);
+}
+
+.container-logo {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.container-text {
+  width: 315px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.container-form {
+  width: 90%;
+  height: 900px;
+  margin: 60px auto;
+  background-color: #cdd5e042;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.select-css {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("https://www.svgrepo.com/show/509905/dropdown-arrow.svg"),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 1.5em top 50%, 0 0;
+  background-size: 1.5em auto, 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .container-text__title {
+    font-size: 3rem;
+  }
+
+  .container-text__description {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container-text {
+    width: 450px;
+    margin: 20px auto;
+  }
+
+  .container-form {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-text__title {
+    font-size: 4rem;
+  }
+
+  .container-text__description {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .container-form {
+    width: 63%;
+  }
+
+  .container-text {
+    width: 650px;
+  }
+}
